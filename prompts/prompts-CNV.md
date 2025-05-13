@@ -305,7 +305,7 @@ Si, por favor
 
 aqui tienes el log
 No llega a tratar la columna manager interview, no muestra el nº de tarjetas
-Veo que en la linea 36 de posotion.cy.js chequea si existe una mb-2.card cuando no existe ninguna tarjeta. esto lo esta haciendo antes del if que controla si hay o no tarjetas(linea 38)
+Veo que en la linea 36 de cypress/integration/position.spec.js chequea si existe una mb-2.card cuando no existe ninguna tarjeta. esto lo esta haciendo antes del if que controla si hay o no tarjetas(linea 38)
 
 ---
 
@@ -314,7 +314,7 @@ si
 ---
 
 No, tienes que fijarte que el problema sigue estando.
-estas intentando obtener una mb-2.card (en la linea 36 de position.cy.js) cuando no hay mb2-cards. Lo que muestra el numero de cards lo estas lanzado despues como es logico porque primero tienes que obtener el objeto padre para poder saber el número de tarjetas
+estas intentando obtener una mb-2.card (en la linea 36 de cypress/integration/position.spec.js) cuando no hay mb2-cards. Lo que muestra el numero de cards lo estas lanzado despues como es logico porque primero tienes que obtener el objeto padre para poder saber el número de tarjetas
 Resumiendo:
 No puedes lanzar la linea 36 del código si en la columna no hay tarjetas
 Tienes que poner un control antes de eso, o bien hacer un try catch para gestionar el error y que el test pueda contunuar
@@ -489,7 +489,7 @@ Vamos a por la prueba de backend
 
 ---
 
-escríbelo como nuevo test en el archivo position.cy.js
+escríbelo como nuevo test en el archivo cypress/integration/position.spec.js
 
 ---
 
@@ -560,7 +560,7 @@ Ya estan todas las pruebas del grupo 2?
    npx cypress run
    ```
 
-3. Selecciona el archivo `position.cy.js` y ejecuta los tests.
+3. Selecciona el archivo `cypress/integration/position.spec.js` y ejecuta los tests.
 
 ## Peculiaridades de los tests del grupo 2
 
